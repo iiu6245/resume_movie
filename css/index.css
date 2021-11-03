@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+html { overflow:hidden }
+body { font:12px/1.6 arial; color:#555; }
+
+#menu { top:50%; height:436px;position:fixed; 
+        width:200px;
+        transform:translateY(-50%); left:35px; z-index:99; 
+background:url(../img/remotecontrol.jpg) no-repeat; 
+background-size: 200px auto;
+background-position:left center; border-radius:20px}
+#menu .textshow {position:absolute; transform:translateX(-50%); top:15%;left:50%; font-size:20px;text-align:center; vertical-align:middle}
+#menu a {position:absolute; display:flex; align-items:center; width:65px; height:65px;line-height:1.2em; border-radius:50%; border:1px solid #777;background-color:#e4e3e3; justify-content:center;text-align:center; font-size:13px;font-weight: 600;}
+
+#menu a.on {background-color: #ffca08;}
+#menu a:nth-child(1){left:30px;bottom:100px;margin-bottom:25px}
+#menu a:nth-child(2){right:30px;bottom:100px;margin-bottom:25px}
+#menu a:nth-child(3){left:30px;bottom:45px;}
+#menu a:nth-child(4){right:30px;bottom:45px;}
+
+/* #menu li {  margin:10px 0  }
+
+#menu li a { display:block; height:20px;  width:20px;
+    border-radius:50%; border: 1px solid #000; background-color:#ffca08;
+    position:relative ;font-size:16px
+}
+#menu li.on a { background-color:#000; transform:scale(1.2) }
+#menu li a span { position:absolute; top:3px; left:30px; 
+    width:100px; display:none; }    
+#menu li.on a span { display:block; } */
+
+#wrap { width:400vw; height:100vh; overflow:hidden}
+section { 
+    float:left;
+    width:100vw; 
+    height:100vh; 
+    position:relative;  
+    overflow:hidden;
+}
+/* 첫번째 박스(인적사항)*/
+#sect1{ background:url(../img/bg1.jpg)no-repeat;position:relative;
+        background-size:25% auto;
+        background-position: 30% center;
+}
+
+#sect1 .intro {border-radius: 10px; 
+               border: 1px solid #ffca08;
+               background:#000;
+               position:absolute;
+               width:600px;
+               top:50%;right:15%; transform:translateY(-50%);
+               padding:20px;
+               box-shadow:0px 0px 20px  #ffca08;
+               color:white;
+               font-family: 'Noto Sans KR', sans-serif;        
+}
+#sect1 .intro .audio a {font-size:18px}
+#sect1 .intro .audio span{background:#fff; color:#000; font-size:20px; border:1px solid #fff; padding:3px;border-radius: 3px; margin-right:10px;font-family: 'Nanum Pen Script'} 
+#sect1 .pbox { border:0px solid red; height:250px; overflow:hidden;font-size:15px;margin-top:20px}
+.textbox >div {line-height:1.4em; overflow:hidden}
+.textbox >div.firststory { 
+    animation:textmove 20s infinite 1s;  
+}
+@keyframes textmove {
+    0% { margin-top:0px }
+    100% { margin-top:-100%}
+}
+.textbox>div .left{width:30%;float:left;text-align:right}
+.textbox>div .right{width:65%;float:right;}
+
+/* 두번째 박스(스킬 그래프) */
+#sect2{position:relative;
+    background:url(../img/bg2.jpg)no-repeat left center;  
+    background-size:contain;}
+.skillContainer { position:absolute; top:50%; transform:translateY(-50%);
+    text-align:center; padding:10% 0% 5% 63%; width:100% }
+.skillContainer > div {
+    height:50px; 
+    width:100%; margin:30px 0; 
+    /* border:2px solid #bbb; */
+    position:relative; 
+    /* box-shadow:0px 0px 10px #bbb; */
+    /* border-radius:50px; */
+}
+.skillContainer > div > p {
+    position:absolute; right:100%; top:50%; transform:translate(-20px, -50%);
+    font-size:20px; text-align:center; }
+.skillContainer > div > .score { position:absolute; left:0; top:0; 
+    height:100%; width:0%; transition:all 0.5s;  
+    /* border-radius:50px 0 0 50px;  */
+}
+.skillContainer > div.html > .score {background:#FED434;box-shadow: 0px 0px 20px #fffb08;}
+.skillContainer > div.css > .score { background:#FED434;box-shadow: 0px 0px 20px #fffb08;}
+.skillContainer > div.script > .score { background:#FED434;box-shadow: 0px 0px 20px #fffb08;}
+.skillContainer > div.jquery > .score {  background:#FED434;box-shadow: 0px 0px 20px #fffb08;}
+.skillContainer > div.react > .score {  background:#FED434;box-shadow: 0px 0px 20px #fffb08;}
+
+.skillContainer > div > .score > .myscore {
+    position:absolute; right:10px; 
+    top:50%; color:#000; 
+    transform:translateY(-50%);
+    font-size:20px; opacity:1; 
+}
+
+#sect3{
+    background-color:rgb(206, 205, 205);
+    }
+#sect3 ul{width:100%;height:500px; position:relative; top:30%;
+    /* position:absolute; top:40%; left:0; */
+    text-align:center; padding-left:100px; 
+}
+#sect3 ul li{display:inline-block; 
+    width:20%;
+     /* background:url(../img/livg.jpg) no-repeat; 
+     background-size:contain; height:200px;  */
+     /* padding-top:80px; */
+     font-family: 'Nanum Pen Script';font-size:30px;
+     position:relative}
+#sect3 ul li a{position:absolute; top:50%;
+    transform:translateY(-50%);
+    text-align:center;
+    left:0; width:100%}
+#sect3 .category{position:absolute;
+    top:20%; left:40%; }
+#sect3 .category a { border:3px solid #000; border-radius:5px; 
+    background-color:#fff; font-size:18px;font-weight: 600;
+    margin:8px;padding:10px}
+
+#sect4{background:url(../img/bg4.jpg)no-repeat center;    
+        background-size: auto ;position:relative ;
+    }
+    
+#sect4 .formbox {
+    position:absolute;
+    top:55%; left:50%;
+    transform:translate(-50%,-50%);
+    transition:all 0.5s;
+    width:500px
+       
+    }
+  
+   
+    #sect4 col:nth-child(1) { width:20% }
+    #sect4 col:nth-child(2) { width:80% }
+    #sect4 td { padding:10px 3px; font-size:15px; color:#000 }
+    #sect4 td:first-child{text-align:right}
+    #sect4 input[type=text] { width:120px; height:30px; border:2px solid #ffca08; border-radius:10px}
+    /* #sect4 textarea { width:70px; height:70px; border:1px solid #000 } */
+    #sect4 .btn { 
+        text-align:center;
+         margin:20px;
+         margin-left:-80px}
+    #sect4 button { border:none; border-radius:12px; width:50px; height:40px; font-size:16px; color:#fff; padding:5px }
+    #sect4 button[type=submit] { background-color:#bbb; margin-right:10px}
+    #sect4 button[type=reset] { background-color:#bbb}
+    
+    @media screen and (max-width:1600px){
+       
+        #sect1 .intro {border-radius: 10px; 
+                border: 1px solid #ffca08;
+                background:#000;
+                position:absolute;
+                width:500px;
+                top:50%;right:10%; transform:translateY(-50%);
+                padding:20px;
+                box-shadow:20px 20px 20px  #ffca08;
+                color:white;     }    
+ 
+ 
+ 
+}
